@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/img/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
 
     <title>{{ project.title }}</title>
 
@@ -47,27 +47,27 @@
       <div class="row">
         <h2 class="centered mb">Project Description &amp; Results.</h2>
         <div class="col-md-4">
-           
+
           <h5><b>{% if project.title_one %}{{project.title_one}}{% else %}THE CLIENT{% endif %}</b></h5>
           <p>{{ project.section_one }}</p>
-          
+
         </div><!--/col-md-4-->
         <div class="col-md-4">
-        
+
           <h5><b>{% if project.title_two %}{{project.title_two}}{% else %}THE PROPOSAL{% endif %}</b></h5>
           <p>{{ project.section_two }}</p>
- 
+
         </div><!--/col-md-4-->
         <div class="col-md-4">
-        
+
           <h5><b>{% if project.title_three %}{{project.title_three}}{% else %}THE RESULT{% endif %}</b></h5>
           <p>{{ project.section_three }}</p>
 
         </div><!--/col-md-4-->
       </div><!--/row-->
-    </div><!-- /.container --> 
+    </div><!-- /.container -->
     <div class="container">
-{# 
+{#
       <div class="row">
         <div class="col-md-10 col-md-offset-1 centered">
           <img src="/assets/img/logoclient.png" width="200" alt="">
@@ -90,8 +90,8 @@
 #}
       <div class="row mt">
         <div class="col-md-8 col-md-offset-2">
-            {% if project.download_link %}<a href="{{project.download_link}}">{% endif %}    
-              <img 
+            {% if project.download_link %}<a href="{{project.download_link}}">{% endif %}
+              <img
                 src="{% if project.screenshot %}{{project.screenshot}}{% else %}/assets/img/screen.png{% endif %}"
                 class="img-responsive aligncenter" alt=""
                 {% if project.download_link %}data-toggle="tooltip" data-placement="top" title="Download"{% endif %}
