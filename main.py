@@ -27,8 +27,7 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_env.get_template('templates/index.jinja2')
-        portfolio = Project.query()
-        portfolio.order(-Project.last_touch_date_time)
+        portfolio = Project.query().order(-Project.last_touch_date_time)
         self.response.write(template.render({'portfolio':portfolio}))
 
 class ProjectHandler(webapp2.RequestHandler):
